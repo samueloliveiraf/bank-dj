@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Transferir</h3>
+<ul>
+    <li>Conta encontrada: {{ conta.number_account }}</li>
+    <li>
+        <form action="{% url 'transfer' conta.number_account %}" method="POST"> {% csrf_token %}
+            <label>
+                Informe o valor que deseja transferir
+                <input type="number" name="balance">
+            </label>
+            <button type="submit" name="action">Transferir</button>
+        </form>
+    </li>
+</ul>
+</body>
+</html>

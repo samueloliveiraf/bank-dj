@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <form action="{% url 'find_account' %}" method="POST"> {% csrf_token %}
+          <label>
+              Informe o número da conta para transferência
+              <input type="number" name="number_account">
+          </label>
+          <button type="submit" name="action">Buscar</button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Conta</th>
+        <th>Saldo transferido</th>
+    </tr>
+    {% for my_transfer in my_transfers %}
+        <tr>
+            <td>{{ my_transfer.name_destinatary }}</td>
+            <td>{{ my_transfer.email_destinatary }}</td>
+            <td>{{ my_transfer.account_destiny }}</td>
+            <td>{{ my_transfer.balance_transfer }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
